@@ -46,12 +46,12 @@
 
 ## Технологии
 
-**Python 3.11+** - Язык программирования 
-**Django 6.0** - Веб-фреймворк
-**Django Admin** - Кастомизированная панель управления 
-**SQLite** - База данных (для демо) 
-**HTML/CSS/JS** - Фронтенд 
-**Fetch API** - AJAX-запросы
+| **Python 3.11+** | Язык программирования |
+| **Django 6.0** | Веб-фреймворк |
+| **Django Admin** | Кастомизированная панель управления |
+| **SQLite** | База данных (для демо) |
+| **HTML/CSS/JS** | Фронтенд |
+| **Fetch API** | AJAX-запросы |
 
 ---
 
@@ -164,14 +164,14 @@ Cargo-Taxi/
 ## Скриншоты
 
 ### Главная страница (форма заказа)
-![Главная страница](<img width="1894" height="896" alt="demo1" src="https://github.com/user-attachments/assets/8d49539d-ccac-4705-b8b7-6bf00edfd20b" />)
+<img width="1894" height="896" alt="demo1" src="https://github.com/user-attachments/assets/8d49539d-ccac-4705-b8b7-6bf00edfd20b" />
 
 ### Админ-панель (список заказов)
-![Админка](<img width="1919" height="910" alt="demo2" src="https://github.com/user-attachments/assets/d4de5552-a805-4b0f-ab30-bdab8798b863" />)
+<img width="1919" height="910" alt="demo2" src="https://github.com/user-attachments/assets/d4de5552-a805-4b0f-ab30-bdab8798b863" />
 
 
 ### Обработка заказа
-![Редактирование заказа](<img width="1895" height="912" alt="demo3" src="https://github.com/user-attachments/assets/8ea6bb3c-6fb8-4cc7-8db0-a5fc728cf2ec" />)
+<img width="1895" height="912" alt="demo3" src="https://github.com/user-attachments/assets/8ea6bb3c-6fb8-4cc7-8db0-a5fc728cf2ec" />
 
 ---
 
