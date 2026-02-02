@@ -1,22 +1,28 @@
+# Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 .Python
+*.py[cod]
 
+# Django
 *.log
 db.sqlite3
 db.sqlite3-journal
 /staticfiles/
 /media/
 
+# Секреты
 .env
 .env.local
 
+# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
 
+# Миграции (опционально)
 */migrations/__pycache__/
-*/migrations/*.pyc
+*/migrations/[0-9]*.py
