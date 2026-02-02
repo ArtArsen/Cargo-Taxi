@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Грузовое такси — Кызыл-Кыя</title>
+    <link rel="stylesheet" href="{% static 'orders/css/style.css' %}">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+    <img src="{% static 'orders/img/logo.png' %}" alt="Грузовое такси">
+    </div>
+
+    <div class="lang-switch">
+        <button onclick="setLang('ru')">RU</button>
+        <button onclick="setLang('kg')">KG</button>
+        <button onclick="setLang('uz')">UZ</button>
+        <button onclick="setLang('tj')">TJ</button>
+    </div>
+
+</header>
+
+<section class="hero">
+    <h1 data-i18n="hero_title"></h1>
+    <p data-i18n="hero_desc"></p>
+    <p class="sub" data-i18n="hero_sub"></p>
+    <button class="btn" onclick="openModal()" data-i18n="order_btn"></button>
+</section>
+
+<section class="reveal">
+    <h2 data-i18n="when_title"></h2>
+    <div class="grid">
+        <div class="card">
+            <div class="card-content">
+                <h3 data-i18n="case_move"></h3>
+                <p data-i18n="case_move_desc"></p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <h3 data-i18n="case_furniture"></h3>
+                <p data-i18n="case_furniture_desc"></p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <h3 data-i18n="case_tech"></h3>
+                <p data-i18n="case_tech_desc"></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="reveal">
+    <h2 data-i18n="cars_title"></h2>
+    <div class="grid">
+        <div class="card">
+            <img src="{% static 'orders/img/Hyundai Porter.jpg' %}" alt="">
+            <div class="card-content">
+                <h3>Hyundai Porter</h3>
+                <p data-i18n="car_porter"></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'orders/img/Газель.jpg' %}" alt="">
+            <div class="card-content">
+                <h3>Газель</h3>
+                <p data-i18n="car_gazel"></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'orders/img/Labo.png' %}" alt="">
+            <div class="card-content">
+                <h3>Labo</h3>
+                <p data-i18n="car_labo"></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'orders/img/Бортовая машин.jpeg' %}" alt="">
+            <div class="card-content">
+                <h3 data-i18n="car_board"></h3>
+                <p data-i18n="car_board_desc"></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="reveal">
+    <h2 data-i18n="steps_title"></h2>
+    <div class="steps">
+        <div data-i18n="step_1"></div>
+        <div data-i18n="step_2"></div>
+        <div data-i18n="step_3"></div>
+        <div data-i18n="step_4"></div>
+    </div>
+</section>
+
+<section class="reveal">
+    <h2 data-i18n="geo_title"></h2>
+    <p data-i18n="geo_desc"></p>
+    <br>
+    <button class="btn" onclick="openModal()" data-i18n="order_btn"></button>
+</section>
+
+<section class="reveal">
+    <h2 data-i18n="contacts_title"></h2>
+
+    <div class="contacts">
+        <a href="tel:+996700000000">📞 +996 700 00 00 00</a>
+        <a href="https://wa.me/996700000000" target="_blank">💬 WhatsApp</a>
+        <a href="https://t.me/your_tg" target="_blank">✈ Telegram</a>
+        <a href="https://instagram.com/your_inst" target="_blank">📸 Instagram</a>
+    </div>
+</section>
+
+
+<footer>
+    © 2025 <span data-i18n="logo"></span> · Кызыл-Кыя
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="modal" onclick="if(event.target === this) closeModal()">
+    <div class="modal-box">
+        <div class="close" onclick="closeModal()">✕</div>
+        <h3 data-i18n="form_title"></h3>
+
+        <form id="orderForm">
+            {% csrf_token %} 
+            <input data-i18n-placeholder="point_a" required>
+            <input data-i18n-placeholder="point_b" required>
+            <input data-i18n-placeholder="name" required>
+            <input data-i18n-placeholder="phone" required>
+            <textarea rows="3" data-i18n-placeholder="comment"></textarea>
+
+            <small data-i18n="form_note"></small>
+            <small data-i18n="form_agree"></small>
+
+            <button type="submit" class="btn" style="width:100%" data-i18n="send"></button>
+        </form>
+    </div>
+</div>
+
+<script src="{% static 'orders/js/main.js' %}"></script>
+</body>
+</html>
