@@ -91,25 +91,32 @@ cp .env.example .env
 python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
 ```
 
-### 5. Применение миграций
+### 5. Создать файлы миграций
+```bash
+python manage.py makemigrations
+```
+
+**Примечание:** Этот шаг необходим, так как файлы миграций не хранятся в репозитории.
+
+### 6. Применить миграции
 ```bash
 python manage.py migrate
 ```
 
-### 6. Создание суперпользователя
+### 7. Создать суперпользователя
 ```bash
 python manage.py createsuperuser
-# Введите логин, email и пароль для доступа в админку
+# Введите логин, email (можно пропустить) и пароль
 ```
 
-### 7. Запуск сервера
+### 8. Запустить сервер
 ```bash
 python manage.py runserver
 ```
 
 Откройте в браузере:
-**Сайт**: http://127.0.0.1:8000
-**Админ-панель**: http://127.0.0.1:8000/admin
+- **Сайт**: http://127.0.0.1:8000
+- **Админ-панель**: http://127.0.0.1:8000/admin
 
 ---
 
